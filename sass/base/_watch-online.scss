@@ -1,0 +1,49 @@
+.watch-online {
+  background: url('/img/bg-panda.jpg') no-repeat;
+  background-size: cover;
+
+  &__block {
+    display: flex;
+    height: 700px;
+  }
+
+  &__left,
+  &__right {
+    flex-basis: 50%;
+  }
+
+  &__right {
+    flex-grow: 1;
+  }
+
+  &__elispe {
+    width: 465px;
+    height: 465px;
+    margin-top: 12px;
+    position: relative;
+    background: $accent-color;
+    border-radius: 50%;
+  }
+
+  p {
+    width: 500px;
+    position: absolute;
+    top: 74px;
+    left: 74px;
+    font-weight: 700;
+    font-size: 106px;
+    line-height: 0.75;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+
+    span {
+      color: $yellow;
+    }
+  }
+
+  &__btn {
+    margin-left: 180px;
+    margin-top: 70px;
+  }
+}
