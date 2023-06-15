@@ -1,31 +1,24 @@
 .header {
   background-color: #000;
-  position: relative;
-  z-index: 5;
 }
 
-.header__navigation {
+.header__block {
   display: flex;
   align-items: center;
   height: 80px;
   color: #fff;
-
-  nav {
-    margin-left: 63px;
-    flex-grow: 1;
-  }
 }
 
 .logo {
-  display: flex;
-  align-items: center;
   width: 82px;
   height: 52px;
   border: 1px solid #fff;
   border-radius: 2px;
   position: relative;
 
-  h1 {
+  &__text {
+    display: block;
+    padding: 2px;
     font-size: 19.0145px;
     line-height: 1.2;
     text-align: center;
@@ -34,23 +27,22 @@
 
   img {
     position: absolute;
-    left: 10px;
+    left: 8px;
     top: 22px;
   }
 }
 
-.navbar {
+.header__navigation {
   display: flex;
-  gap: 58px;
+  justify-content: space-between;
+  margin-left: 63px;
+  flex: 1 1 auto;
   font-weight: 500;
   line-height: 1.4;
 }
 
-.designed-by {
-  font-weight: 500;
-  line-height: 1.4;
-
-  a {
-    display: block;
-  }
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 58px;
 }
