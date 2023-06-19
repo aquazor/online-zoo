@@ -1,17 +1,20 @@
 .pick-and-feed {
   background: $gradient-orange;
-  padding-top: 70px;
-  padding-bottom: 100px;
+  margin-bottom: 70px;
 
-  &__wrapper {
-    background-color: rgba(253, 253, 255, 0.52);
-    border-radius: 20px;
+  &__container {
+    padding-top: 70px;
+    padding-bottom: 100px;
   }
 
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    padding: 0 15px;
+    background-color: rgba(253, 253, 255, 0.52);
+    border-radius: 20px;
   }
 
   &__top {
@@ -61,6 +64,7 @@
   &__cards-wrapper {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-bottom: 60px;
     gap: 30px;
   }
@@ -89,15 +93,4 @@
   &__arrow {
     padding-top: 65px;
   }
-}
-
-.pcik-and-feed__ {
-}
-.pcik-and-feed__card {
-}
-.pcik-and-feed__card-image {
-}
-.button {
-}
-.pick-andfeed__btn {
 }

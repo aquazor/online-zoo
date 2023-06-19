@@ -1,0 +1,147 @@
+.footer {
+  background-color: #111115;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+}
+
+.left-footer {
+  display: flex;
+  flex-direction: column;
+
+  &__btn {
+    margin-top: 68px;
+    background: $gradient-accent;
+    border-radius: 5px;
+  }
+}
+
+.right-footer {
+  display: flex;
+
+  &__input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    label {
+      font-weight: 400;
+      font-size: 1.5em;
+      line-height: 1.2;
+      color: #fff;
+    }
+
+    .input-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 14px;
+      gap: 10px;
+      font-weight: 400;
+      font-size: 1em;
+      line-height: 1.4;
+    }
+
+    input {
+      width: 228px;
+      height: 42px;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-weight: 400;
+      font-size: 16px;
+      background: transparent;
+      border: 1px solid $accent-color;
+      border-radius: 2px;
+      color: #fff;
+    }
+
+    button[type='submit'] {
+      width: 130px;
+      height: 42px;
+      font-weight: 400;
+      font-size: 1em;
+      line-height: 42px;
+      border: 1px solid $active-green;
+      border-radius: 5px;
+      background-color: $light-gray;
+      color: $active-green;
+    }
+
+    input::placeholder,
+    input::-webkit-input-placeholder,
+    input::-moz-placeholder,
+    input:-ms-input-placeholder {
+      color: #bdbdbd;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 44px;
+
+  &__item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #fff;
+
+    a {
+      display: inline-flex;
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    background-color: rgba(196, 196, 196, 0.5);
+    border-radius: 50%;
+  }
+
+  &__name {
+    margin-left: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .designed-by {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.navbar-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-right: 32px;
+  font-weight: 500;
+  line-height: 1.4;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px 58px;
+    color: #fff;
+  }
+
+  &__item {
+    a {
+      display: block;
+    }
+  }
+}

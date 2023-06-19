@@ -10,6 +10,17 @@ ul {
 }
 
 a {
+  display: block;
   text-decoration: none;
   color: inherit;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
 }
