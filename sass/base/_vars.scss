@@ -1,3 +1,18 @@
+// CONTENT WIDTH
+
+$content-desktop: 1190px;
+$content-desktop-small: 970px;
+$content-tablet: 630px;
+$content-mobile: 330px;
+
+// MEDIA-BREAKPOINTS
+
+$breakpoint-desktop-small: 1280px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+
+// BASE COLORS
+
 $accent-color: #f9804b;
 $hover-accent: #e47209;
 $orange-default: #fe9013;
@@ -9,8 +24,8 @@ $gray-color: #767474;
 $gray-smoky: #ababab;
 $light-gray: #f1f3f2;
 
+// GRADIENT COLORS
 $gradient-accent: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
-
 $gradient-orange: linear-gradient(
     315.75deg,
     rgba(254, 210, 144, 0.7) 30.06%,

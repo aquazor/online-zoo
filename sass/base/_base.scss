@@ -14,15 +14,33 @@ body {
   overflow-x: hidden;
 }
 
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+}
+
 [class*='__container'] {
-  max-width: 1190px;
+  max-width: $content-desktop;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+
+  @include desktop-small {
+    max-width: $content-desktop-small;
+  }
+
+  @include tablet {
+    max-width: $content-tablet;
+  }
+
+  @include mobile {
+    max-width: $content-mobile;
+  }
 }
 
 .button {
+  display: block;
   width: 298px;
   height: 54px;
   background: $gradient-accent;
@@ -78,7 +96,7 @@ p {
 }
 
 img {
-  display: block;
+  vertical-align: bottom;
 }
 
 .none {

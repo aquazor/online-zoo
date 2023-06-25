@@ -1,18 +1,31 @@
 .animals {
-  height: 1196px;
   padding-top: 90px;
-  position: relative;
   overflow: hidden;
 
   &__container {
     max-width: 1352px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding-bottom: 100px;
+    position: relative;
   }
 
   &__btn {
-    margin-top: 80px;
+    margin: 80px auto 0 auto;
+  }
+
+  &__palm,
+  &__strelitzia {
+    position: absolute;
+    z-index: 0;
+  }
+
+  &__palm {
+    bottom: 0;
+    left: -670px;
+  }
+
+  &__strelitzia {
+    bottom: 0;
+    right: -124px;
   }
 }
 
@@ -31,7 +44,6 @@
     flex: 0 0 62px;
     height: 62px;
     border-radius: 50%;
-    z-index: 5;
 
     &-left {
       background: url(/img/icons/btn-arrow-left.svg) center no-repeat, $gradient-accent;
@@ -90,25 +102,120 @@
   }
 }
 
-.flowers-animals {
-  max-width: 1600px;
-  margin: 0px auto;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  top: -360px;
-  z-index: 0;
+@media all and (max-width: 1360px) {
+  .animals {
+    padding-top: 70px;
 
-  &__palm,
-  &__strelitzia {
+    &__container {
+      max-width: 972px;
+    }
+
+    &__palm {
+      left: -186px;
+
+      img {
+        max-height: 202px;
+      }
+    }
+
+    &__strelitzia {
+      right: -20px;
+
+      img {
+        max-height: 180px;
+      }
+    }
+  }
+
+  .carousel {
     position: relative;
+
+    &__left,
+    &__active,
+    &__right {
+      gap: 92px 30px;
+    }
+
+    &__btn {
+      width: 62px;
+      position: absolute;
+      top: 50%;
+
+      z-index: 9;
+
+      &-left {
+        left: 50%;
+        transform: translate(-146px, -50%);
+      }
+
+      &-right {
+        right: 50%;
+        transform: translate(146px, -50%);
+      }
+    }
   }
 
-  &__strelitzia {
-    top: 185px;
-  }
-
-  &__palm {
-    left: -540px;
+  .card-carousel {
+    max-width: 294px;
+    max-height: 354px;
   }
 }
+
+// @media all and (max-width: 1000px) {
+//   .animals {
+//     padding-top: 70px;
+
+//     &__container {
+//       max-width: 972px;
+//     }
+
+//     &__palm {
+//       left: -186px;
+
+//       img {
+//         max-height: 202px;
+//       }
+//     }
+
+//     &__strelitzia {
+//       right: -20px;
+
+//       img {
+//         max-height: 180px;
+//       }
+//     }
+//   }
+
+//   .carousel {
+//     position: relative;
+
+//     &__left,
+//     &__active,
+//     &__right {
+//       gap: 92px 30px;
+//     }
+
+//     &__btn {
+//       width: 62px;
+//       position: absolute;
+//       top: 50%;
+
+//       z-index: 9;
+
+//       &-left {
+//         left: 50%;
+//         transform: translate(-146px, -50%);
+//       }
+
+//       &-right {
+//         right: 50%;
+//         transform: translate(146px, -50%);
+//       }
+//     }
+//   }
+
+//   .card-carousel {
+//     max-width: 294px;
+//     max-height: 354px;
+//   }
+// }

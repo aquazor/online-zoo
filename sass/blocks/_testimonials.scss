@@ -1,9 +1,10 @@
 .testimonials {
+  padding-top: 140px;
+  padding-bottom: 180px;
   position: relative;
 
   &__container {
-    padding-top: 70px;
-    padding-bottom: 180px;
+    min-height: fit-content;
   }
 
   h3 {
@@ -16,10 +17,12 @@
   }
 
   &__flower {
-    display: block;
     position: absolute;
+    max-height: 275px;
+    overflow: hidden;
     right: 0;
-    bottom: 0;
+    bottom: 0px;
+    z-index: 0;
   }
 }
 
@@ -65,14 +68,14 @@
   &__card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    height: 100%;
     gap: 10px;
     padding: 15px 15px 19px 15px;
     border-radius: 18px;
     background-color: $light-gray;
 
     &--outer {
-      max-width: 268px;
+      flex: 0 1 268px;
       max-height: 391px;
       padding: 2px;
       border-radius: 20px;
@@ -94,11 +97,62 @@
   &__location {
     display: flex;
     gap: 6px;
+    color: #bdbdbd;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.2;
   }
 
-  & p:last-child {
-    min-width: 234px;
-    max-height: 302px;
+  .small-text {
     overflow: hidden;
+  }
+}
+
+@include desktop-small {
+  .testimonials {
+    padding-top: 100px;
+    padding-bottom: 140px;
+
+    h3 {
+      margin-bottom: 30px;
+    }
+
+    &__flower {
+      transform: scale(0.75);
+      max-height: 300px;
+      right: -100px;
+      bottom: -38px;
+    }
+  }
+
+  .scroll {
+    margin-top: 20px;
+    margin-bottom: 52px;
+
+    &__border {
+      flex: 0 0 390px;
+    }
+
+    &__inner {
+      width: 388px;
+    }
+
+    &__anchor {
+      width: 75px;
+    }
+  }
+
+  .cards-testimonials {
+    &__card {
+      padding-bottom: 41px;
+
+      &--outer {
+        flex-basis: 293px;
+      }
+
+      &--outer:last-child {
+        display: none;
+      }
+    }
   }
 }
