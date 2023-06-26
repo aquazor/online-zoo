@@ -2,28 +2,23 @@
   background-color: #111115;
 
   &__container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) max-content;
+    grid-template-areas:
+      'logo input input input'
+      'btn btn btn btn'
+      'socials navbar navbar designed';
+
     padding-top: 40px;
     padding-bottom: 50px;
   }
-}
 
-.left-footer {
-  display: flex;
-  flex-direction: column;
-
-  &__btn {
-    margin-top: 68px;
-    background: $gradient-accent;
-    border-radius: 5px;
+  &__logo {
+    grid-area: logo;
   }
-}
-
-.right-footer {
-  display: flex;
 
   &__input-section {
+    grid-area: input;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -80,6 +75,52 @@
       color: #bdbdbd;
     }
   }
+
+  &__btn {
+    grid-area: btn;
+    margin-top: 36px;
+    background: $gradient-accent;
+    border-radius: 5px;
+  }
+
+  &__socials {
+    grid-area: socials;
+  }
+
+  &__navbar {
+    grid-area: navbar;
+  }
+
+  &__designed-by {
+    grid-area: designed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
+
+.navbar-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 15px;
+  font-weight: 500;
+  line-height: 1.4;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 58px;
+    color: #fff;
+  }
+
+  &__item {
+    a {
+      display: block;
+    }
+  }
 }
 
 .socials {
@@ -115,36 +156,18 @@
     font-size: 16px;
     line-height: 26px;
   }
-
-  .designed-by {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
 }
 
-.navbar-footer {
+.designed-by {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-right: 32px;
-  font-weight: 500;
-  line-height: 1.4;
-
-  &__list {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 5px 58px;
-    color: #fff;
-  }
-
-  &__item {
-    a {
-      display: block;
-    }
-  }
+  flex-direction: column;
+  gap: 10px;
 }
 
 @include desktop-small {
+  .navbar-footer {
+    &__list {
+      column-gap: 48px;
+    }
+  }
 }
