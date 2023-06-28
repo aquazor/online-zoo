@@ -13,6 +13,7 @@
   }
 
   &__btn {
+    margin-top: 30px;
     border-radius: 5px;
   }
 
@@ -30,7 +31,6 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  margin-bottom: 30px;
 
   &__border {
     flex: 0 0 600px;
@@ -62,8 +62,7 @@
 .cards-testimonials {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
 
   &__card {
     display: flex;
@@ -108,7 +107,7 @@
   }
 }
 
-@include desktop-small {
+@include desktop-1280 {
   .testimonials {
     padding-top: 100px;
     padding-bottom: 140px;
@@ -123,11 +122,14 @@
       right: -100px;
       bottom: -38px;
     }
+
+    &__btn {
+      margin-top: 52px;
+    }
   }
 
   .scroll {
     margin-top: 20px;
-    margin-bottom: 52px;
 
     &__border {
       flex: 0 0 390px;
@@ -147,12 +149,81 @@
       padding-bottom: 41px;
 
       &--outer {
-        flex-basis: 293px;
+        flex-basis: 100%;
+        max-width: 293px;
       }
 
       &--outer:last-child {
         display: none;
       }
+    }
+  }
+}
+
+@include tablet-830 {
+  .testimonials {
+    padding-top: 60px;
+    padding-bottom: 80px;
+
+    &__btn {
+      margin-top: 40px;
+    }
+
+    &__flower {
+      max-height: 270px;
+      transform: scale(0.5);
+      right: -130px;
+      bottom: -67px;
+    }
+  }
+
+  .cards-testimonials {
+    flex-direction: column;
+    gap: 15px;
+
+    &__card {
+      max-height: 105px;
+      padding: 12px 12px 8px 12px;
+
+      &--outer {
+        flex-basis: auto;
+        max-width: 100%;
+        overflow: hidden;
+        max-height: 109px;
+      }
+
+      &--outer:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .scroll {
+    display: none;
+  }
+}
+
+@include mobile-500 {
+  .testimonials {
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+    h3 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    &__btn {
+      width: 100%;
+      max-width: 298px;
+      min-width: 200px;
+      margin: 30px auto 0 auto;
+    }
+
+    &__flower {
+      transform: scale(0.25) rotate(-10deg);
+      right: -142px;
+      bottom: -102px;
     }
   }
 }

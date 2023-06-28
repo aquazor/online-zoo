@@ -22,7 +22,6 @@
   }
 
   h1 {
-    width: 500px;
     position: absolute;
     top: 74px;
     left: 74px;
@@ -36,8 +35,10 @@
     margin-right: 100px;
     margin-bottom: 100px;
   }
+}
 
-  @include desktop-small {
+@include desktop-1280 {
+  .watch-online {
     background-size: cover;
     background-position: 50%;
 
@@ -52,14 +53,74 @@
 
       h1 {
         font-size: 85px;
-        top: 56px;
-        left: 11px;
+        top: 58px;
       }
     }
 
     &__btn {
       margin-right: 50px;
       margin-bottom: 45px;
+    }
+  }
+}
+
+@include tablet-830 {
+  .watch-online {
+    &__container {
+      min-height: 340px;
+    }
+
+    &__elipse {
+      width: 238px;
+      height: 238px;
+      margin-top: 10px;
+      margin-right: 50px;
+
+      h1 {
+        font-size: 55px;
+        top: 38px;
+        left: 46px;
+
+        span {
+          color: $yellow;
+        }
+      }
+    }
+
+    &__btn {
+      align-self: flex-start;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@include mobile-500 {
+  .watch-online {
+    background-position: 50% 0;
+    background-size: 110%;
+
+    &__container {
+      min-height: 260px;
+    }
+
+    &__elipse {
+      width: 119px;
+      height: 119px;
+      margin-top: 22px;
+      margin-right: 20px;
+
+      h1 {
+        max-width: 130px;
+        font-size: 28px;
+        top: 20px;
+        left: 20px;
+      }
+    }
+
+    &__btn {
+      align-self: center;
+      margin-bottom: 15px;
     }
   }
 }

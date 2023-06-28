@@ -19,7 +19,8 @@
   }
 
   &__text {
-    flex: 0 0 465px;
+    flex: 1 0 auto;
+    max-width: 465px;
 
     h2 {
       margin-bottom: 20px;
@@ -49,8 +50,10 @@
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
   }
+}
 
-  @include desktop-small {
+@include desktop-1280 {
+  .idea {
     padding-top: 100px;
     padding-bottom: 70px;
 
@@ -59,21 +62,110 @@
     }
 
     &__text {
-      flex: 0 0 454px;
+      max-width: 454px;
     }
 
     &__image {
       flex: 0 1 calc(50% - 15px);
+      height: 408px;
 
       img {
-        min-height: 408px;
+        height: 100%;
         object-fit: cover;
-        object-position: -80px;
       }
     }
 
     &__flower {
       display: none;
+    }
+  }
+}
+
+@include tablet-830 {
+  .idea {
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+    &__container {
+      gap: 0;
+    }
+
+    &__image {
+      display: none;
+    }
+
+    &__text {
+      max-width: 495px;
+
+      h2 + p {
+        margin-bottom: 30px;
+      }
+
+      h4 {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__flower {
+      display: block;
+      top: -65px;
+      right: -120px;
+
+      img {
+        height: 476px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 600px) {
+  .idea {
+    padding-top: 15px;
+    padding-bottom: 20px;
+
+    &__container {
+      justify-content: center;
+    }
+
+    &__text {
+      max-width: 400px;
+      flex-shrink: 1;
+
+      h2 {
+        text-wrap: balance;
+        font-size: 2rem;
+      }
+    }
+
+    &__flower {
+      right: -30px;
+
+      img {
+        height: 200px;
+      }
+    }
+  }
+}
+
+@include mobile-500 {
+  .idea {
+    &__text {
+      h2 {
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+      }
+
+      .idea__text h2 + p {
+        margin-bottom: 20px;
+      }
+
+      h4 {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__flower {
+      right: calc(-21vw - 10px);
     }
   }
 }

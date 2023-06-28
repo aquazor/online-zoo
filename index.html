@@ -17,9 +17,13 @@
     <div class="wrapper">
       <header class="header">
         <div class="header__container">
-          <a href="#!" class="header__logo logo">
-            <span class="logo__text">PetStory online</span>
-            <img class="logo__image" src="img/icons/logo-bamboo.svg" alt="logo" />
+          <a href="#!" class="header__logo logo-header">
+            <span class="logo__text logo-header__text">PetStory online</span>
+            <img
+              class="logo__image logo-header__image"
+              src="img/icons/logo-bamboo.svg"
+              alt="logo"
+            />
           </a>
           <nav class="header__navbar navbar-header">
             <ul class="navbar-header__list">
@@ -31,9 +35,10 @@
             </ul>
             <span><a href="#!"></a> Designed by ©</span>
           </nav>
+          <div class="header__burger"><span></span><span></span><span></span></div>
         </div>
       </header>
-      <main class="">
+      <main>
         <section class="watch-online">
           <div class="watch-online__container">
             <div class="watch-online__elipse">
@@ -67,8 +72,8 @@
             <div class="animals__carousel carousel">
               <button class="carousel__btn carousel__btn-left"></button>
               <div class="carousel__wrapper">
-                <div class="carousel__left" id="carousel__left"></div>
-                <div class="carousel__active" id="carousel__active">
+                <div class="carousel__left carousel__block" id="carousel__left"></div>
+                <div class="carousel__active carousel__block" id="carousel__active">
                   <div class="carousel__card card-carousel">
                     <img class="card-carousel__image" src="/img/cards/card-01.jpg" alt="Panda" />
                     <div class="card-carousel__descriprion">
@@ -154,7 +159,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="carousel__right" id="carousel__right "></div>
+                <div class="carousel__right carousel__block" id="carousel__right "></div>
               </div>
               <button class="carousel__btn carousel__btn-right"></button>
             </div>
@@ -194,8 +199,12 @@
                     </div>
                     <p>Pay with card</p>
                   </div>
-                  <div class="pick-and-feed__arrow">
-                    <img src="/img/icons/arrow.svg" alt="arrow-right" />
+                  <div class="pick-and-feed__arrow pick-and-feed__arrow-1">
+                    <picture>
+                      <source media="(min-width: 831px)" srcset="/img/icons/arrow-01.svg" />
+                      <source media="(max-width: 830px)" srcset="/img/icons/arrow-02.svg" />
+                      <img src="/img/icons/arrow-01.svg" alt="arrow-right" />
+                    </picture>
                   </div>
                   <div class="pick-and-feed__card">
                     <div class="pick-and-feed__card-image">
@@ -203,8 +212,12 @@
                     </div>
                     <p>Payment goes to the zoo</p>
                   </div>
-                  <div class="pick-and-feed__arrow">
-                    <img src="/img/icons/arrow.svg" alt="arrow-right" />
+                  <div class="pick-and-feed__arrow pick-and-feed__arrow-2">
+                    <picture>
+                      <source media="(min-width: 831px)" srcset="/img/icons/arrow-01.svg" />
+                      <source media="(max-width: 830px)" srcset="/img/icons/arrow-02.svg" />
+                      <img src="/img/icons/arrow-01.svg" alt="arrow-right" />
+                    </picture>
                   </div>
                   <div class="pick-and-feed__card">
                     <div class="pick-and-feed__card-image">
@@ -351,9 +364,13 @@
       </main>
       <footer class="footer">
         <div class="footer__container">
-          <a href="#!" class="footer__logo logo">
-            <span class="logo__text">PetStory online</span>
-            <img class="logo__image" src="img/icons/logo-bamboo.svg" alt="logo" />
+          <a href="#!" class="footer__logo logo-footer">
+            <span class="logo__text logo-footer__text">PetStory online</span>
+            <img
+              class="logo__image logo-footer__image"
+              src="img/icons/logo-bamboo.svg"
+              alt="logo"
+            />
           </a>
           <div class="footer__input-section">
             <form class="form" action="">
@@ -413,8 +430,10 @@
             </ul>
           </nav>
           <div class="footer__designed-by">
-            <p>Designed by Alisa Samborskaya</p>
-            <p>©RSSchool & ©Yem Digital 2021</p>
+            <p>
+              Designed by Alisa Samborskaya <br />
+              ©RSSchool & ©Yem Digital 2021
+            </p>
           </div>
         </div>
       </footer>
